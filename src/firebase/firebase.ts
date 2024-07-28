@@ -1,3 +1,5 @@
+// src/firebase/firebase.ts
+
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
@@ -11,33 +13,18 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-console.log('Environment:', process.env.NODE_ENV);
-console.log('Firebase config:', JSON.stringify(firebaseConfig, null, 2));
-
 let app;
-let auth;
-let firestore;
-
-try {
-  if (!getApps().length) {
-    console.log('Initializing Firebase app...');
-    app = initializeApp(firebaseConfig);
-    console.log('Firebase app initialized successfully');
-  } else {
-    console.log('Firebase app already initialized, getting existing app...');
-    app = getApp();
-  }
-
-  console.log('Initializing Firebase Auth...');
-  auth = getAuth(app);
-  console.log('Firebase Auth initialized successfully');
-
-  console.log('Initializing Firestore...');
-  firestore = getFirestore(app);
-  console.log('Firestore initialized successfully');
-} catch (error) {
-  console.error('Error initializing Firebase:', error);
-  throw error;
+if (!getApps().length) {
+  app = initializeApp(firebaseConfig);
+} else {
+  app = getApp();
 }
 
-export { app, auth, firestore };
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+
+const initFirebase = () => {
+  return { auth, firestore };
+};
+
+export { app, auth, firestore, initFirebase };
