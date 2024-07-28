@@ -27,6 +27,9 @@ const AuthPage: React.FC<AuthPageProps> = () => {
 			<div className='max-w-7xl mx-auto'>
 				<Navbar />
 				<div className='flex items-center justify-center h-[calc(100vh-5rem)] pointer-events-none select-none'>
+					<p className="flex items-center justify-center text-white font-semibold" style={{fontSize: '23.5px'}}> 
+					LeetMath. <br></br><br></br> The world's latest mathematics resource platform. <br></br> <br></br> For Students.
+					</p>
 					<Image src='/hero.png' alt='LEETMATH' width={700} height={700} />
 				</div>
 				{authModal.isOpen && <AuthModal />}
