@@ -1,6 +1,6 @@
 # LeetMath
 
-[LeetMath](https://leetmath-website.vercel.app/) is a comprehensive mathematics resource for students, inspired by the popular coding platform LeetCode. It was created for a Hackathon by Alfardil Alam, Alfayed Alam, Yusef Moustafa, and Maheen Rassell.
+[LeetMath](https://leetmath-website.vercel.app/) is a comprehensive mathematics resource for students combined with AI, inspired by the popular coding platform LeetCode. It was created for a Hackathon by Alfardil Alam, Alfayed Alam, Yusef Moustafa, and Maheen Rassell.
 
 [Watch our demo video](https://youtu.be/wxYb2KnsYJ8)
 
