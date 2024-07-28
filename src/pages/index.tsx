@@ -30,7 +30,7 @@ export default function Home() {
 					)}
 					<table className='text-sm text-left text-black-500 dark:text-black-400 sm:w-7/12 w-full max-w-[1200px] mx-auto'>
 						{!loadingProblems && (
-							<thead className='text-xs text-black-700 uppercase dark:text-black-400 border-b '>
+							<thead className='text-xs text-black-700 uppercase dark:text-black-400 border-b'>
 								<tr>
 									<th scope='col' className='px-1 py-3 w-0 font-medium'>
 										Status
@@ -41,7 +41,6 @@ export default function Home() {
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
 										Difficulty
 									</th>
-
 									<th scope='col' className='px-6 py-3 w-0 font-medium'>
 										Category
 									</th>
