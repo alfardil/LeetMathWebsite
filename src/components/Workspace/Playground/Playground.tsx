@@ -15,7 +15,7 @@ const Playground:React.FC<PlaygroundProps> = () => {
 	<Split className="h-[calc(100vh-94px)]" direction="vertical" sizes={[60,40]} minSize={60}>
 		<div className="w-full overflow-auto">
 			<CodeMirror 
-			value="const a = 1;"
+			value="Explanation: "
 			theme={vscodeDark}
 			// extensions={[javascript()]}
 			style={{fontSize:16}}
