@@ -1,17 +1,17 @@
-import { auth } from "@/firebase/firebase";
-import Link from "next/link";
-import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import Logout from "../Buttons/Logout";
-import { useSetRecoilState } from "recoil";
 import { authModalState } from "@/atoms/authModalAtom";
-import Image from "next/image";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { BsList } from "react-icons/bs";
-import Timer from "../Timer/Timer";
-import { useRouter } from "next/router";
+import { auth } from "@/firebase/firebase";
 import { problems } from "@/utils/problems";
 import { Problem } from "@/utils/types/problem";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { BsList } from "react-icons/bs";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useSetRecoilState } from "recoil";
+import Logout from "../Buttons/Logout";
+import Timer from "../Timer/Timer";
 
 type TopbarProps = {
 	problemPage?: boolean;
@@ -44,7 +44,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	return (
 		<nav className='relative flex h-[50px] w-full shrink-0 items-center px-5 bg-bannerColor text-dark-gray-7'>
 			<div className={`flex w-full items-center justify-between ${!problemPage ? "max-w-[1200px] mx-auto" : ""}`}>
-				<Link href='/' className='h-[22px] flex-1'>
+				<Link href='/auth' className='h-[22px] flex-1'>
 					<Image src='/favicon.png' alt='Logo' height={27.5} width={27.5} />
 				</Link>
 
